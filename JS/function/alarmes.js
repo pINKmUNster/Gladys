@@ -23,7 +23,7 @@ var motion_sensor = require('./motion_sensor.js');
 var alarm_launch = require('./alarm_launch.js');
 
 var URL_SERV = parametre.getURL_SERV();
-var temps_avant_annulation_reveil = 12*60*60*1000;
+
 var alarmes = new Array();
 alarmes[0] = new Array();
 alarmes[0]['number'] = 0;

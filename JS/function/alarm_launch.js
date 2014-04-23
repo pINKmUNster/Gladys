@@ -26,7 +26,7 @@ var state = require('./state.js');
 var music = require('./music.js');
 
 var URL_SERV = parametre.getURL_SERV();
-
+var temps_avant_annulation_reveil = 12*60*60*1000;
 
 
 exports.smart_wakeup = function ()
