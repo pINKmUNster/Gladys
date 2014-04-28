@@ -26,6 +26,7 @@
 
       <script type="text/javascript" src="JS/bootstrap.js"></script> 
       <script type="text/javascript" src="JS/devices.js"></script> 
+      <script type="text/javascript" src="JS/sensors.js"></script> 
   </head>
   <body>
     <?php include_once("navbar.php"); ?>
@@ -51,6 +52,25 @@
           <td><select id="id_room" class="form-control" >
             </select></td>
           <td><input type="submit" id="submit" value="Ajouter"  class="btn btn-sm btn-success"/></td>
+        </tr>
+         <tbody>
+      </table>
+
+      <h2>Capteurs</h2>
+      <table  class="table table-striped">  
+        <tbody id="table_sensors">
+        <tr>
+          <th>Nom</th>
+          <th>Code</th>
+          <th>Pièce</th>
+          <th>Modifier</th>
+        </tr>
+        <tr>
+          <td><input type="text" id="name_sensor" placeholder="Nom" class="form-control"/></td>
+          <td><input type="number" id="code_sensor" placeholder="Code" class="form-control" /></td>
+          <td><select id="id_room_sensor" class="form-control" >
+            </select></td>
+          <td><input type="submit" id="submit_sensor" value="Ajouter"  class="btn btn-sm btn-success"/></td>
         </tr>
          <tbody>
       </table>

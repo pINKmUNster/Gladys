@@ -29,7 +29,6 @@
     <script type="text/javascript" src="JS/electric_device.js"></script> 
      <script type="text/javascript" src="JS/meteo.js"></script> 
       <script type="text/javascript" src="JS/reveil.js"></script> 
-     <script type="text/javascript" src="JS/iphone.js"></script> 
      <script type="text/javascript" src="JS/music.js"></script> 
      <script type="text/javascript" src="JS/geoloc.js"></script> 
   </head>

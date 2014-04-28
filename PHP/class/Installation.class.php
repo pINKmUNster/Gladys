@@ -55,6 +55,19 @@
             $reqinsert->execute(array('version' => $version, 'date' =>date('Y-m-d H:i:s'))) or die(print_r($reqinsert->errorInfo()));
         }
 
+        public function get_version_bdd()
+        {
+            $req = $this->bdd->query('SELECT * FROM bdd_version ORDER BY date DESC')or die(print_r($reqinsert->errorInfo()));
+                if($donnees = $req->fetch())
+                {
+                   return $donnees['version'];
+                }
+                else
+                {
+                    return NULL;
+                }
+        }
+
         public function table_exist()
         {      
             $req = $this->bdd->query("show tables");

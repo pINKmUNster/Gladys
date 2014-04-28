@@ -42,9 +42,14 @@ sudo ln -s /usr/share/phpmyadmin /var/www/phpmyadmin
 sudo apt-get install nodejs npm
 
 #Prérerequis NPM
+sudo npm config set registry http://registry.npmjs.org/
+sudo npm install -g xmlhttprequest
+sudo npm install -g googlemaps
 
-npm install -g xmlhttprequest
-npm install -g googlemaps
+#Installation des modules NPM en local
+cd /var/www/gladys/JS
+sudo npm install xmlhttprequest
+sudo npm install googlemaps
 
 #Installation de mpg321
 sudo apt-get install mpg321
@@ -62,13 +67,18 @@ sudo apt-get install moc
 #Installation WiringPi
 
 sudo apt-get install git-core
-git clone git://git.drogon.net/wiringPi
+cd /home/pi/
+sudo git clone git://git.drogon.net/wiringPi
 cd /home/pi/wiringPi
-./build
+sudo ./build
 
 #Installation RcSwitch Pi
-
-git clone https://github.com/r10r/rcswitch-pi.git
+cd /home/pi/
+sudo git clone https://github.com/r10r/rcswitch-pi.git
 cd /home/pi/rcswitch-pi
-make
+sudo make
 
+#Installation du détecteur de mouvements
+
+cd /var/www/gladys/PHP/scripts/sensors
+sudo make

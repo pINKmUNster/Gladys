@@ -30,3 +30,5 @@
 
  INSTALLATION :
  les étapes sont décrites à cette adresse : http://intelligenceonline.synergize.co/developpeur
+
+ Pour faire la MAJ de la 1.0 vers la 1.1, exécuter le script "maj.sh", puis relancer le code NodeJS pour faire la mise à jour de la base de donnée

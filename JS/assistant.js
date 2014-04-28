@@ -50,13 +50,12 @@ var motion_sensor = require(function_repertory +'motion_sensor.js');
 var music = require(function_repertory +'music.js');
 var version_manager = require(function_repertory +'gladys_version.js');
 var display_version = require(function_repertory +'display_version.js');
-
+var maj = require(function_repertory +'maj_bdd.js');
 /*
 //////// Bienvenue ////////
 */
 
 display_version.Display_version();
-
 
 /*
 //////// Modules loader ////////
@@ -76,6 +75,7 @@ fs.readdir(__dirname+"/modules/", function(err, files){
 //////// Lancement des tâche à l'allumage ////////
 */
 
+maj.maj_bdd();
 alarmes.get_alarmes();
 lessons.get_lessons();
 state.refresh_presence();
@@ -97,4 +97,3 @@ var check_lessons_interval = setInterval(lessons.check_lesson, 1000*60);
 var get_lessons_interval = setInterval(lessons.get_lessons, 1000*60*60*6);
 var refresh_presence_interval = setInterval(state.refresh_presence, 1000*60*15);
 var refresh_dort_interval = setInterval(state.refresh_dort, 1000*60*40);
-

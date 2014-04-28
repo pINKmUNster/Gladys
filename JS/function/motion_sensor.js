@@ -26,7 +26,7 @@ var URL_SERV = parametre.getURL_SERV();
 exports.get_last_motion = function (callback)
 {
      var xhr_motion = new XMLHttpRequest();
-        xhr_motion.open('GET', URL_SERV +'/PHP/controller/action.controller.php?action=last_motion');
+        xhr_motion.open('GET', URL_SERV +'/PHP/controller/motion.controller.php?action=last_motion');
         xhr_motion.onreadystatechange = function()
         {
             if (xhr_motion.readyState == 4 && xhr_motion.status == 200)
@@ -56,7 +56,7 @@ exports.launch_motion_sensor = function (callback)
 {
     feedback.disp('launch_motion_sensor');
     var xhr_motion = new XMLHttpRequest();
-        xhr_motion.open('GET', URL_SERV +'/PHP/controller/action.controller.php?action=launch_motion_sensor');
+        xhr_motion.open('GET', URL_SERV +'/PHP/controller/sensor.controller.php?action=launch_motion_sensor');
         xhr_motion.onreadystatechange = function()
         {
             if (xhr_motion.readyState == 4 && xhr_motion.status == 200)
@@ -84,7 +84,33 @@ exports.stop_motion_sensor = function (callback)
 {
     feedback.disp('stop_motion_sensor');
     var xhr_motion = new XMLHttpRequest();
-        xhr_motion.open('GET', URL_SERV +'/PHP/controller/action.controller.php?action=stop_motion_sensor');
+        xhr_motion.open('GET', URL_SERV +'/PHP/controller/sensor.controller.php?action=stop_motion_sensor');
+        xhr_motion.onreadystatechange = function()
+        {
+            if (xhr_motion.readyState == 4 && xhr_motion.status == 200)
+            {
+                if(callback)
+                {
+                    callback(xhr_motion.responseText);
+                }
+                
+            }
+            else if(xhr_motion.readyState == 4 && xhr_motion.status != 200) 
+            { // En cas d'erreur !
+        
+                feedback.disp("stop_motion_sensor : Impossible de stopper le détecteur de mouvement.");
+ 
+            }
+        };
+ 
+        xhr_motion.send(null);
+        return xhr_motion;
+}
+
+exports.number_of_sensors = function (callback)
+{
+    var xhr_motion = new XMLHttpRequest();
+        xhr_motion.open('GET', URL_SERV +'/PHP/controller/sensor.controller.php?action=number_of_sensors');
         xhr_motion.onreadystatechange = function()
         {
             if (xhr_motion.readyState == 4 && xhr_motion.status == 200)

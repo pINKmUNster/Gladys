@@ -31,6 +31,17 @@
 			case 'set_version_bdd':
 				$installation->set_version_bdd($_GET['version']);
 			break;
+			case 'get_version_bdd':
+				$return = $installation->get_version_bdd();
+				echo $return;
+			break;
+			case 'maj_bdd':
+				if($installation->get_version_bdd() == "1.0")
+				{
+					$installation->executeQueryFile("../parametres/maj1.sql");
+					$installation->set_version_bdd("1.1");
+				}
+			break;
 
 
 
