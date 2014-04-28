@@ -80,7 +80,7 @@ exports.check_alarm = function ()
             }
             if(heure_alarme == heure_actuelle && minute_alarme == minute_actuelle)
             {
-                alarm_launch.smart_wakeup();
+                alarm_launch.wakeup();
             }
             else
             {

@@ -117,7 +117,7 @@ exports.number_of_sensors = function (callback)
             {
                 if(callback)
                 {
-                    callback();
+                    callback(xhr_motion.responseText);
                 }
                 
             }
