@@ -50,7 +50,7 @@ exports.wakeup = function ()
 			            {
 			                motion_sensor.launch_motion_sensor();
 			            });
-			            smart_wake_up.smart_wake_up();
+			            smart_wake_up.smart_wakeup();
 			            
 			        }
 					else
@@ -60,13 +60,13 @@ exports.wakeup = function ()
 		        }
 		        else
 		        {
-		        	smart_wake_up.smart_wake_up();
+		        	smart_wake_up.smart_wakeup();
 		        }
    			});
    		}
    		else
    		{
-   			smart_wake_up.smart_wake_up();
+   			smart_wake_up.smart_wakeup();
    		}
    });
     
