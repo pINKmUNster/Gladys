@@ -187,8 +187,18 @@
 
  		public function say($text)	// lit un texte
 		{
+				/*$codeset = "UTF8";  // warning ! not UTF-8 with dash '-' 
+      			$lang ="fr_FR";
+
+				putenv('LANG='.$lang.'.'.$codeset); 
+				putenv('LANGUAGE='.$lang.'.'.$codeset); 
+				//bind_textdomain_codeset('mydomain', $codeset); 
+
+				// set locale 
+				//bindtextdomain('mydomain', ABSPATH.'/locale/'); 
+				setlocale(LC_ALL, $lang.'.'.$codeset); */
 				exec('madplay --adjust-volume=-20');
-				exec('mpg321 "http://translate.google.com/translate_tts?tl=fr&q='.$text.'"');
+				exec('mpg321 "http://translate.google.com/translate_tts?tl=fr&q='.urlencode($text).'"');
 				exec('madplay --adjust-volume=16');
 				$this->save_output(1,$text);
 		}

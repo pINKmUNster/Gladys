@@ -33,7 +33,7 @@ exports.get = function (callback)
             				if (xhrmeteo.readyState == 4 && xhrmeteo.status == 200) 
                             {
                                 var donneesmeteo = JSON.parse(xhrmeteo.responseText);
-                                var text = 'A '+donneesmeteo.city.name+', la température aujourd\'hui est de '+Math.round(donneesmeteo.list[0].temp.day)+'° C';
+                                var text = 'A '+donneesmeteo.city.name+', la température aujourd\'hui est de '+Math.round(donneesmeteo.list[0].temp.day)+'degrés Celsius.';
                                 feedback.disp(text);
                                 if(callback)
                                 {
