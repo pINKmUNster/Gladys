@@ -27,5 +27,7 @@ fi
 
 #Installation du détecteur de mouvements
 
+apt-get install libcurl4-openssl-dev
+
 cd /var/www/gladys/PHP/scripts/sensors
 sudo make
