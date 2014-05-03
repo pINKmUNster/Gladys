@@ -187,6 +187,7 @@
 
  		public function say($text)	// lit un texte
 		{
+				//exec('yatm -t 1.3 /var/www/gladys/PHP/sound/bonjourmonsieur.mp3');
 				exec('madplay --adjust-volume=-20');
 				exec('mpg321 "http://translate.google.com/translate_tts?tl=fr&q='.urlencode($text).'&ie=UTF-8"');
 				exec('madplay --adjust-volume=16');

@@ -51,9 +51,11 @@ cd /var/www/gladys/JS
 sudo npm install xmlhttprequest
 sudo npm install googlemaps
 
-#Installation de mpg321
+#Installation de mpg321 et madplay
 sudo apt-get install mpg321
 sudo adduser www-data audio
+
+sudo apt-get install madplay
 
 #Droits pour les fichiers mouvements
 
