@@ -4,17 +4,17 @@
  * Projet Gladys
  * http://intelligenceonline.synergize.co
  * ===================================================
- * 
+ *
  * Copyright 2014, Pierre-Gilles Leymarie
  * Logiciel sous License Creative Commons 3.0 France
  * http://creativecommons.org/licenses/by-nc-sa/3.0/fr/
- * 
+ *
  * Pas d’Utilisation Commerciale
- * Partage dans les mêmes conditions et 
+ * Partage dans les mêmes conditions et
  * avec mentions et lien vers le projet initial.
  *
  * Contact : projectgladys@gmail.com
- * 
+ *
  * ========================================================== -->
 <html>
   <head>
@@ -25,19 +25,19 @@
     <link rel="stylesheet" href="css/panel.css" />
     <link rel="stylesheet"  href="css/theme.css" />
 
-    <script type="text/javascript" src="JS/bootstrap.js"></script> 
-    <script type="text/javascript" src="JS/electric_device.js"></script> 
-     <script type="text/javascript" src="JS/meteo.js"></script> 
-      <script type="text/javascript" src="JS/reveil.js"></script> 
-     <script type="text/javascript" src="JS/music.js"></script> 
-     <script type="text/javascript" src="JS/geoloc.js"></script> 
+    <script type="text/javascript" src="JS/bootstrap.js"></script>
+    <script type="text/javascript" src="JS/electric_device.js"></script>
+     <script type="text/javascript" src="JS/meteo.js"></script>
+      <script type="text/javascript" src="JS/reveil.js"></script>
+     <script type="text/javascript" src="JS/music.js"></script>
+     <script type="text/javascript" src="JS/geoloc.js"></script>
   </head>
   <body role="document">
 
 
    <?php include_once("navbar.php"); ?>
 
-     
+
 
 <div class="container theme-showcase" role="main">
 
@@ -49,7 +49,7 @@
 
         <p id="weather_p"></p>
         <p><a href="#" class="btn btn-primary btn-large">Plus d'infos</a></p>
-        
+
       </div>
     </div>
 
@@ -66,7 +66,7 @@
           <p id="electric_devices_p">
           <table class="table-condensed" id="electric_devices_table">
           </table></p>
-          <? if( isset($_COOKIE['user']) && $user->check_cookies($_COOKIE['user']) && $user->check_if_admin($_COOKIE['user']) )
+          <?php if( isset($_COOKIE['user']) && $user->check_cookies($_COOKIE['user']) && $user->check_if_admin($_COOKIE['user']) )
                     {
                         ?>
               <p><a class="btn btn-default" role="button" href="devices.php">Ajouter un appareil</a></p>
@@ -91,7 +91,7 @@
       <footer>
         <p>© Gladys 2014</p>
       </footer>
-      
+
     </div> <!-- /container -->
 
 
