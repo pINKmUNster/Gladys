@@ -25,7 +25,8 @@
     <link rel="stylesheet" href="css/panel.css" />
     <link rel="stylesheet"  href="css/theme.css" />
 
-    <script type="text/javascript" src="JS/bootstrap.js"></script>
+    <script type="text/javascript" src="JS/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="JS/bootstrap.min.js"></script>
     <script type="text/javascript" src="JS/electric_device.js"></script>
      <script type="text/javascript" src="JS/meteo.js"></script>
       <script type="text/javascript" src="JS/reveil.js"></script>
