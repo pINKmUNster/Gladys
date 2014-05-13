@@ -16,8 +16,8 @@
           <ul class="nav navbar-nav">
                <li id="accueil_nav"><a href="index.php">Accueil</a></li>
                <li id="alarme_nav"><a href="alarmes.php">Mes Alarmes</a></li>
-
-                <?php if( isset($_COOKIE['user']) && $user->check_cookies($_COOKIE['user']) && $user->check_if_admin($_COOKIE['user']) )
+               <li id="module_nav"><a href="modules.php">Mes Modules</a></li>
+                <? if( isset($_COOKIE['user']) && $user->check_cookies($_COOKIE['user']) && $user->check_if_admin($_COOKIE['user']) )
                     {
                         ?>
                   <li id="user_nav"><a href="users.php">Utilisateurs</a></li>

@@ -79,8 +79,7 @@
 
         public function get_last_motion()
         {
-        	$req = $this->bdd->prepare('SELECT * FROM motion ORDER BY datetime DESC LIMIT 0, 1');
-        	$req->execute(array('sensor' => $sensor)) or die(print_r($bdd->errorInfo()));
+        	$req = $this->bdd->query('SELECT * FROM motion ORDER BY datetime DESC LIMIT 0, 1');
 				if($donnees = $req->fetch())
 				{
 					return $donnees['datetime'];

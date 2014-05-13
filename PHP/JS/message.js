@@ -1,5 +1,5 @@
 /* ===================================================
- * Projet : Build Your Own Jarvis
+ * Projet Gladys
  * http://intelligenceonline.synergize.co
  * ===================================================
  * 
@@ -11,7 +11,7 @@
  * Partage dans les mêmes conditions et 
  * avec mentions et lien vers le projet initial.
  *
- * Contact : buildyourownjarvis@gmail.com
+ * Contact : projectgladys@gmail.com
  * 
  * ========================================================== */
 

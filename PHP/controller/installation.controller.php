@@ -41,6 +41,13 @@
 					$installation->executeQueryFile("../parametres/maj1.sql");
 					$installation->set_version_bdd("1.1");
 				}
+
+				if($installation->get_version_bdd() == "1.1")
+				{
+					$installation->executeQueryFile("../parametres/modules.sql");
+					$installation->set_version_bdd("1.2");
+				}
+				
 			break;
 
 

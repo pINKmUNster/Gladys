@@ -1,5 +1,5 @@
 /* ===================================================
- * Gladys Project
+ * Projet Gladys
  * http://intelligenceonline.synergize.co
  * ===================================================
  * 
