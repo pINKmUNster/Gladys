@@ -39,17 +39,25 @@ sudo apt-get install phpmyadmin
 sudo ln -s /usr/share/phpmyadmin /var/www/phpmyadmin
 
 #Installation de NodeJS + Npm
-sudo apt-get install nodejs npm
+#sudo apt-get install nodejs npm
+
+cd /home/pi
+wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+sudo dpkg -i node_latest_armhf.deb
 
 #Prérerequis NPM
 sudo npm config set registry http://registry.npmjs.org/
 sudo npm install -g xmlhttprequest
 sudo npm install -g googlemaps
+sudo npm install -g nodemailer
+sudo npm install -g mail-listener2
 
 #Installation des modules NPM en local
 cd /var/www/gladys/JS
 sudo npm install xmlhttprequest
 sudo npm install googlemaps
+sudo npm install nodemailer
+sudo npm install mail-listener2
 
 #Installation de mpg321 et madplay
 sudo apt-get install mpg321
