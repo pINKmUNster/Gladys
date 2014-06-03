@@ -47,6 +47,12 @@
 					$installation->executeQueryFile("../parametres/modules.sql");
 					$installation->set_version_bdd("1.2");
 				}
+
+				if($installation->get_version_bdd() == "1.2")
+				{
+					$installation->executeQueryFile("../parametres/scenario.sql");
+					$installation->set_version_bdd("1.3");
+				}
 				
 			break;
 

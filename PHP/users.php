@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jarvis</title>
+    <title><?php echo $user->assistant_name; ?></title>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     
    <link rel="stylesheet" href="css/bootstrap.css" />

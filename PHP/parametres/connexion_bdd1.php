@@ -2,7 +2,7 @@
 
 			// INFORMATIONS A REMPLIR CI-DESSOUS : 
 
-			$this->dbname = ""; // remplir ici le nom de votre base de donnée (une nouvelle de préférence)
+			$this->dbname = "assistant"; // remplir ici le nom de votre base de donnée (une nouvelle de préférence)
 			$this->username = "root"; // le username pour vous connecter
 			$this->password = "pass"; // votre mot de passe
 

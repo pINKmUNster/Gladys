@@ -132,3 +132,30 @@ exports.number_of_sensors = function (callback)
         xhr_motion.send(null);
         return xhr_motion;
 }
+
+
+exports.save_motion = function (sensor,callback)
+{
+     var xhr_motion = new XMLHttpRequest();
+        xhr_motion.open('GET', URL_SERV +'/PHP/controller/motion.controller.php?action=motion&sensor=' + sensor);
+        xhr_motion.onreadystatechange = function()
+        {
+            if (xhr_motion.readyState == 4 && xhr_motion.status == 200)
+            {
+                if(callback)
+                {
+                    callback(xhr_motion.responseText);
+                }
+                
+            }
+            else if(xhr_motion.readyState == 4 && xhr_motion.status != 200) 
+            { // En cas d'erreur !
+        
+                feedback.disp("motion : impossible d'enregistrer le mouvement dans la BDD.");
+ 
+            }
+        };
+ 
+        xhr_motion.send(null);
+
+}

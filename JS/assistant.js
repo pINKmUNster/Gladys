@@ -53,6 +53,7 @@ var display_version = require(function_repertory +'display_version.js');
 var maj = require(function_repertory +'maj_bdd.js');
 var wake = require(function_repertory +'smart_wake_up.js');
 var mail_sender = require(function_repertory +'send_mail.js');
+var serial_port = require(function_repertory +'serial_port.js');
 
 
 /*

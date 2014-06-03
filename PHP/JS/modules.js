@@ -82,7 +82,10 @@ function display_module(id,name,link, widget_path)
 	var name_element = document.createElement('h3');
     var delete_button = document.createElement('button');
     var panel_body = document.createElement('div');
+    var script_element = document.createElement('script');
 
+    script_element.type = 'text/javascript';
+    script_element.src = serveur + "/PHP/minuteur/minuteur.js";
     element.className ="col-md-4";
     panel.className ="panel panel-default";
     panel_heading.className ="panel-heading";
@@ -97,22 +100,33 @@ function display_module(id,name,link, widget_path)
 
     get_widget_content(widget_path, function (content) {
         panel_body.innerHTML = content;
+
+         element.appendChild(panel);
+    
+    
+        panel.appendChild(panel_heading);
+        panel_heading.appendChild(name_element);
+        
+        name_element.appendChild(link_element);
+        name_element.appendChild(delete_button);
+        panel.appendChild(panel_body);
+
+
+        document.getElementById('module_zone').appendChild(element);
+
+        
+         element.appendChild(script_element);
+        
+
+         delete_button.addEventListener('click', function(){
+                              delete_module(id,element);
+                             });
     });
 
     
-    element.appendChild(panel);
-    panel.appendChild(panel_heading);
-    panel_heading.appendChild(name_element);
-    
-    name_element.appendChild(link_element);
-    name_element.appendChild(delete_button);
-    panel.appendChild(panel_body);
+   
 
-    document.getElementById('module_zone').appendChild(element);
 
-     delete_button.addEventListener('click', function(){
-                          delete_module(id,element);
-                         });
 
 }
 

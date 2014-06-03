@@ -51,6 +51,7 @@ sudo npm install -g xmlhttprequest
 sudo npm install -g googlemaps
 sudo npm install -g nodemailer
 sudo npm install -g mail-listener2
+sudo npm install -g serialport
 
 #Installation des modules NPM en local
 cd /var/www/gladys/JS
@@ -58,6 +59,7 @@ sudo npm install xmlhttprequest
 sudo npm install googlemaps
 sudo npm install nodemailer
 sudo npm install mail-listener2
+sudo npm install serialport
 
 #Installation de mpg321 et madplay
 sudo apt-get install mpg321
@@ -94,3 +96,5 @@ apt-get install libcurl4-openssl-dev
 
 cd /var/www/gladys/PHP/scripts/sensors
 sudo make
+
+
