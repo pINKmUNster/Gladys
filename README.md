@@ -18,4 +18,4 @@ Imaginons un scénario :
 Ainsi, au lieu d'un système passif qui attend des commandes de l'utilisateur, nous avons ici un véritable assistant qui aide l'utilisateur au quotidien en prenant des iniatives. Et ce n'est pas futuriste ! Toutes les technos citées ci-dessus existent...
 
 Gladys est maintenant disponible au téléchargement, vous pouvez la télécharger depuis cette page :
-http://intelligenceonline.synergize.co
+http://gladysproject.com
